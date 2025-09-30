@@ -9,8 +9,7 @@ bootstrapApplication(AppComponent, {
   ...appConfig,
   providers: [
     ...(appConfig.providers || []),
-    provideHttpClient(),
-    provideRouter(routes)
+    provideHttpClient(),      // 👈 IMPORTANTE
+    provideRouter(routes)     // 👈 También necesario para navegar entre login/register
   ]
-})
-.catch(err => console.error(err));
+}).catch(err => console.error(err));
